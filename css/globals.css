@@ -1,0 +1,190 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6459391137478b733ce0c277.64593912bebb00f58fded869.RJROVN9.hcp.png");
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.overlap-group1 {
+  position: relative;
+}
+
+.the-last-fax-bg-1-1 {
+  height: 1080px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+}
+
+.overlap-group {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.background-paper {
+  height: 1080px;
+  left: 2px;
+  object-fit: cover;
+  position: absolute;
+  top: 16px;
+  width: 1920px;
+}
+
+.blank-page {
+  height: 1080px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+}
+
+.blank-page-2 {
+  display: block;
+  height: 1080px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  transform: translate(0, 200px);
+  width: 1920px;
+}
+
+.printer-1 {
+  height: 1080px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+}
+
+.graph-button {
+  cursor: pointer;
+  height: 47px;
+  left: 803px;
+  position: absolute;
+  top: 624px;
+  transition: all 0.2s ease;
+  width: 66px;
+}
+
+.face-button {
+  cursor: pointer;
+  height: 46px;
+  left: 874px;
+  position: absolute;
+  top: 633px;
+  transition: all 0.2s ease;
+  width: 64px;
+}
+
+.x-button {
+  cursor: pointer;
+  height: 48px;
+  left: 786px;
+  position: absolute;
+  top: 674px;
+  transition: all 0.2s ease;
+  width: 65px;
+}
+
+.telegram-button {
+  cursor: pointer;
+  height: 47px;
+  left: 860px;
+  position: absolute;
+  top: 684px;
+  transition: all 0.2s ease;
+  width: 63px;
+}
+
+.the-last-fax-button {
+  cursor: pointer;
+  height: 22px;
+  left: 1004px;
+  position: absolute;
+  top: 677px;
+  transition: all 0.2s ease;
+  width: 35px;
+}
+
+.buy-button {
+  cursor: pointer;
+  height: 22px;
+  left: 997px;
+  position: absolute;
+  top: 698px;
+  transition: all 0.2s ease;
+  width: 35px;
+}
+
+.live-figures-button {
+  cursor: pointer;
+  height: 22px;
+  left: 991px;
+  position: absolute;
+  top: 722px;
+  transition: all 0.2s ease;
+  width: 35px;
+}
+
+.tokenomics-button {
+  cursor: pointer;
+  height: 22px;
+  left: 1010px;
+  position: absolute;
+  top: 656px;
+  transition: all 0.2s ease;
+  width: 35px;
+}
+
+.greenlight {
+  background-color: var(--malachite);
+  border-radius: 19.75px;
+  filter: blur(30px);;
+  height: 40px;
+  left: 1116px;
+  position: absolute;
+  top: 759px;
+  width: 40px;
+}
+
+.redlight {
+  background-color: var(--red);
+  border-radius: 17.88px;
+  filter: blur(30px);;
+  height: 36px;
+  left: 1045px;
+  position: absolute;
+  top: 736px;
+  width: 36px;
+}
+
+.overlap {
+  height: 1096px;
+  width: 1922px;
+}

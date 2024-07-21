@@ -1,0 +1,99 @@
+/* screen - live-figures */
+
+.live-figures {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 1080px;
+  overflow: hidden;
+  width: 1920px;
+}
+
+.live-figures .tokenomics-1 {
+  height: 1080px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+}
+
+.live-figures .the-last-fax-1 {
+  height: 1080px;
+  left: 2px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 1920px;
+}
+
+.live-figures .blank-page-2.animate-enter {
+  animation: animate-enter-frames 2.00s ease-in-out 1.00s 1 normal forwards;
+  display: block;
+  transform: translate(0, 200px);
+}
+
+@keyframes animate-enter-frames {
+  from{opacity: 1;
+transform: translate(0, 200px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.live-figures .graph-button:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.live-figures .face-button:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.live-figures .x-button:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.live-figures .telegram-button:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.live-figures .the-last-fax-button:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.live-figures .buy-button:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.live-figures .live-figures-button:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.live-figures .tokenomics-button:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.live-figures .redlight {
+  background-color: #ff0004;
+  border-radius: 17.88px;
+  filter: blur(30px);;
+  height: 36px;
+  left: 1045px;
+  position: absolute;
+  top: 736px;
+  width: 36px;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.redlight {
+    animation: blink 1s infinite;
+}
