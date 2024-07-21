@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/live-figures.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    
+    <audio id="myAudio" autoplay>
+        <source src="printer.mp3" type="audio/mpeg">
+    </audio>
+
+    <input type="hidden" id="anPageName" name="page" value="live-figures" />
+    <div class="container-center-horizontal">
+      <form class="live-figures screen" name="form3" action="form3" method="post">
+        <div class="overlap-group1 overlap">
+          <img class="the-last-fax-bg-1-1" src="img/the-last-fax-bg---1-1.png" alt="The last Fax BG - 1 1" />
+          <div class="overlap-group overlap">
+            <img class="background-paper" src="img/background-paper.png" alt="Background Paper" />
+            <img class="tokenomics-1" src="img/tokenomics-1.png" alt="tokenomics 1" />
+            <img class="the-last-fax-1" src="img/the-last-fax-1.png" alt="The last Fax 1" />
+            <img class="blank-page" src="img/background-paper.png" alt="Blank page" />
+            <img class="blank-page-2 animate-enter" src="img/background-paper.png" alt="Blank page 2" />
+          </div>
+          <img class="printer-1" src="img/printer-1.png" alt="printer 1" />
+          <img class="graph-button" src="img/graph-button-1.svg" alt="graph-button" />
+          <img class="face-button" src="img/face-button-1.svg" alt="face-button" />
+          <img class="x-button" src="img/x-button.svg" alt="x-button" />
+          <img class="telegram-button" src="img/telegram-button.svg" alt="telegram-button" />
+          <a href="lastfax.html"
+            ><img class="the-last-fax-button" src="img/the-last-fax-button.svg" alt="The last fax button" /> </a
+          ><a href="buy.html"
+            ><img class="buy-button" src="img/buy-button.svg" alt="Buy button" /> </a
+          ><img class="live-figures-button" src="img/live-figures-button.svg" alt="live figures button" />
+          <a href="tokenomics.html"
+            ><img class="tokenomics-button" src="img/tokenomics-button.svg" alt="tokenomics button" />
+          </a>
+          <div class="greenlight"></div>
+          <div class="redlight"></div>
+        </div>
+      </form>
+    </div>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('myAudio');
+            audio.play().catch(function(error) {
+                console.log('Autoplay was prevented by the browser:', error);
+                // Optionally, you can display a button to play the audio manually
+                var playButton = document.createElement('button');
+                playButton.textContent = 'Play Audio';
+                playButton.onclick = function() {
+                    audio.play();
+                };
+                document.body.appendChild(playButton);
+            });
+        });
+
+      function playMusicAndNavigate() {
+            var audio = document.getElementById('myAudio');
+            audio.play();
+            setTimeout(function() {
+                window.location.href = 'tokenomics.html';
+            }, 1000); // Adjust the timeout as needed to allow the music to start playing
+        }
+
+
+      function ShowOnScroll() {
+        this.toShow = [];
+        this.nextEventY = undefined;
+      }
+
+      ShowOnScroll.prototype.show = function (e) {
+        e.style.display = "";
+      };
+
+      ShowOnScroll.prototype.hide = function (e) {
+        e.style.display = "none";
+      };
+
+      ShowOnScroll.prototype.getTop = function (e) {
+        if (e.Top != undefined && e.Top != 0) {
+          return e.Top;
+        }
+        var top = 0;
+        var iter = e;
+        do {
+          top += iter.offsetTop || 0;
+          iter = iter.offsetParent;
+        } while (iter);
+        e.Top = top;
+        return top;
+      };
+
+      ShowOnScroll.prototype.onScroll = function () {
+        var screenBottom = window.pageYOffset + window.innerHeight;
+        if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
+          return;
+        }
+        this.nextEventY = undefined;
+        for (var i = 0; i < this.toShow.length; i++) {
+          var e = this.toShow[i];
+          var top = this.getTop(e);
+          if (top < screenBottom) {
+            this.show(e);
+            this.toShow.shift();
+            i--;
+          } else {
+            this.nextEventY = top;
+            break;
+          }
+        }
+      };
+
+      ShowOnScroll.prototype.resetScrolling = function () {
+        // Clear state
+        var screenBottom = window.pageYOffset + window.innerHeight;
+        for (var i = 0; i < this.toShow.length; i++) {
+          var e = this.toShow[i];
+          this.show(e);
+        }
+        this.toShow = [];
+        this.nextEventY == undefined;
+
+        // Collect items
+        var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
+        itemsToShowOnScroll = itemsToShowOnScroll.filter(function (e) {
+          return e.getAttribute("show-on-scroll") != undefined;
+        });
+        var getTop = this.getTop;
+        itemsToShowOnScroll.sort(function (a, b) {
+          return getTop(a) - getTop(b);
+        });
+        for (var i = 0; i < itemsToShowOnScroll.length; i++) {
+          var e = itemsToShowOnScroll[i];
+          var top = this.getTop(e);
+          if (top < screenBottom) {
+            continue;
+          }
+          this.toShow.push(e);
+          this.hide(e);
+          this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
+        }
+      };
+
+      ShowOnScroll.prototype.handleEvent = function (e) {
+        switch (e.type) {
+          case "scroll":
+            this.onScroll();
+            break;
+          case "resize":
+            this.resetScrolling();
+            break;
+        }
+      };
+
+      ShowOnScroll.prototype.init = function () {
+        this.resetScrolling();
+        window.addEventListener("scroll", this);
+        window.addEventListener("resize", this);
+      };
+
+      // After anima-src
+      setTimeout(function () {
+        var instShowOnScroll = new ShowOnScroll();
+        instShowOnScroll.init();
+      }, 250);
+    </script>
+    <script>
+      /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+      if (!HTMLFormElement.prototype.reportValidity) {
+        HTMLFormElement.prototype.reportValidity = function () {
+          if (this.checkValidity()) return true;
+          var btn = document.createElement("button");
+          this.appendChild(btn);
+          btn.click();
+          this.removeChild(btn);
+          return false;
+        };
+      }
+
+      function SubmitForm(form_name) {
+        var form = document.getElementsByName(form_name)[0];
+        if (form.reportValidity()) {
+          form.submit();
+          if (window.submitted) window.submitted();
+        }
+      }
+    </script>
+  </body>
+</html>

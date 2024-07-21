@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--<meta name=description content="This site was generated with Anima. www.animaapp.com"/>-->
+    <!-- <link rel="shortcut icon" type=image/png href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/homepage.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="css/globals.css" />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="homepage" />
+    <div class="container-center-horizontal">
+      <form class="homepage screen" name="form7" action="form7" method="post">
+        <div class="overlap-group1 overlap">
+          <img class="the-last-fax-bg-1-1" src="img/the-last-fax-bg---1-1.png" alt="The last Fax BG - 1 1" />
+          <div class="overlap-group overlap">
+            <img class="background-paper" src="img/background-paper.png" alt="Background Paper" />
+            <img class="tokenomics-1" src="img/tokenomics-1.png" alt="tokenomics 1" />
+            <img class="the-last-fax-1" src="img/the-last-fax-1.png" alt="The last Fax 1" />
+            <img class="blank-page" src="img/background-paper.png" alt="Blank page" />
+          </div>
+          <img class="printer-1" src="img/printer-1.png" alt="printer 1" />
+          <img class="graph-button" src="img/graph-button-1.svg" alt="graph-button" />
+          <img class="face-button" src="img/face-button-1.svg" alt="face-button" />
+          <img class="x-button" src="img/x-button.svg" alt="x-button" />
+          <img class="telegram-button" src="img/telegram-button-1.svg" alt="telegram-button" />
+          <a href="lastfax.html"
+            ><img class="the-last-fax-button" src="img/the-last-fax-button.svg" alt="The last fax button" /> </a
+          ><a href="buy.html"
+            ><img class="buy-button" src="img/buy-button.svg" alt="Buy button" /> </a
+          ><a href="live-figures.html"
+            ><img class="live-figures-button" src="img/live-figures-button.svg" alt="live figures button" /> </a
+          ><a href="tokenomics.html"
+            ><img class="tokenomics-button" src="img/tokenomics-button.svg" alt="tokenomics button" />
+          </a>
+          <div class="greenlight"></div>
+          <div class="redlight"></div>
+        </div>
+      </form>
+    </div>
+    <script>
+      /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+      if (!HTMLFormElement.prototype.reportValidity) {
+        HTMLFormElement.prototype.reportValidity = function () {
+          if (this.checkValidity()) return true;
+          var btn = document.createElement("button");
+          this.appendChild(btn);
+          btn.click();
+          this.removeChild(btn);
+          return false;
+        };
+      }
+
+      function SubmitForm(form_name) {
+        var form = document.getElementsByName(form_name)[0];
+        if (form.reportValidity()) {
+          form.submit();
+          if (window.submitted) window.submitted();
+        }
+      }
+    </script>
+  </body>
+</html>
